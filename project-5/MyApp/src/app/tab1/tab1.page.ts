@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,18 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  form = {
+    username : '',
+    password : ''
+  }
+
+  constructor(private route : Router) {}
+
+  doLogin(){
+    localStorage.setItem('username', this.form.username);
+    localStorage.setItem('password', this.form.password);
+    
+    this.route.navigate(['welcome']);
+  }
 
 }

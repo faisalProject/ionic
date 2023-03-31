@@ -1,0 +1,33 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h1>Welcome!</h1>
+    <p>{{ form.username }}</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="footer">
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="news">
+      <ion-icon name="newspaper"></ion-icon>
+      <ion-label>News</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="doLogout()">
+      <ion-icon name="log-out"></ion-icon>
+      <ion-label>Logout</ion-label>
+    </ion-tab-button>
+  </div>
+</ion-footer>

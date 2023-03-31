@@ -1,17 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-content [fullscreen]="true">
+    <div id="container">
+  
+      <h2><b>Login</b></h2>
+      <ion-item fill="outline">
+        <ion-label position="floating">Username</ion-label>
+        <ion-input [(ngModel)]="form.username" [ngModelOptions]="{standalone: true}" placeholder="Enter Username"></ion-input>
+      </ion-item>
+  
+      <ion-item fill="outline">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input [(ngModel)]="form.password" [ngModelOptions]="{standalone: true}" type="password" placeholder="Enter text"></ion-input>
+      </ion-item>
+      <br>
+      <ion-button (click)="doLogin()" expand="full" fill="solid">Submit</ion-button>
+  
+    </div>
+  </ion-content>
 </ion-content>
